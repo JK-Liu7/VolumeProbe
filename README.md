@@ -110,17 +110,17 @@ You need to download the pre-training dataset. The 10k dataset are all open-sour
 ├── data
     ├── BTCV
     ├── TCIAcovid19
-    ├── Luna16-jx
+    ├── Luna16
     ├── stoic21
     ├── Totalsegmentator_dataset
     ├── Flare23
-    ├── LiDC
     └── HNSCC_convert_v1
 ```
 
 ## 🛠️ Usage
 
 **Pre-training**
+
 To pretrain VoCo with VolumeProbe, run:
 
 ```bash
@@ -134,6 +134,7 @@ python S2DC_train_VolumeProbe.py
 ```
 
 **Downstream Fine-tuning**
+
 To fine-tune pre-trained 3D medical image SSL with VolumeProbe, run:
 
 ```bash
