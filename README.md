@@ -12,13 +12,6 @@ VolumeProbe selects crop centers according to three simple principles:
 
 By replacing random cropping with cached probe-bank sampling, VolumeProbe improves representation learning while keeping the SSL backbone and training objective unchanged.
 
-## 📝 TODO
-
-- [x] 📄 Paper released
-- [√] 🧠 Pretraining code
-- [√] 📦 Probe bank construction code
-- [√] 🔧 Downstream evaluation code
-
 ## 🔎 Overview
 
 Random sub-volume cropping is widely used in 3D medical SSL, but it can waste the fixed crop budget on low-yield, boundary-dominated, or redundant regions.
