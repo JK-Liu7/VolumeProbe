@@ -106,6 +106,17 @@ The experiments show that replacing random cropping with VolumeProbe yields cons
 
 ## 🗂️ Dataset
 You need to download the pre-training dataset. The 10k dataset are all open-source and you can download yourself. 
+```
+├── data
+    ├── BTCV
+    ├── TCIAcovid19
+    ├── Luna16-jx
+    ├── stoic21
+    ├── Totalsegmentator_dataset
+    ├── Flare23
+    ├── LiDC
+    └── HNSCC_convert_v1
+```
 
 ## 🛠️ Usage
 
@@ -114,14 +125,17 @@ To pretrain VoCo with VolumeProbe, run:
 
 ```bash
 python voco_train_VolumeProbe.py
+```
 
 To pretrain S2DC with VolumeProbe, run:
 
 ```bash
 python S2DC_train_VolumeProbe.py
+```
 
 **Downstream Fine-tuning**
 To fine-tune pre-trained 3D medical image SSL with VolumeProbe, run:
 
 ```bash
 python main_baseline_xpu_ddp.py
+```
