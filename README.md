@@ -104,3 +104,24 @@ and across **3 downstream task families**:
 
 The experiments show that replacing random cropping with VolumeProbe yields consistent gains across different SSL objectives, backbones, crop sizes, and downstream tasks.
 
+## 🗂️ Dataset
+You need to download the pre-training dataset. The 10k dataset are all open-source and you can download yourself. 
+
+## 🛠️ Usage
+
+**Pre-training**
+To pretrain VoCo with VolumeProbe, run:
+
+```bash
+python voco_train_VolumeProbe.py
+
+To pretrain S2DC with VolumeProbe, run:
+
+```bash
+python S2DC_train_VolumeProbe.py
+
+**Downstream Fine-tuning**
+To fine-tune pre-trained 3D medical image SSL with VolumeProbe, run:
+
+```bash
+python main_baseline_xpu_ddp.py
