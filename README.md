@@ -87,14 +87,6 @@ VolumeProbe is built around three main principles.
 
 **VolumeProbe-Lite** uses geometric and image-statistical cues without external encoders. **VolumeProbe-Feat** uses frozen visual features to study the value of richer semantic cues.
 
-## 📊 Experimental Scope
-
-The experiments isolate the effect of **where the crop budget is spent**. We compare random cropping with probe-bank sampling in **VoCo, S2DC, and MedGMAE**, keeping each baseline's SSL backbone, objective, and crop budget fixed.
-
-Transfer is assessed through segmentation, classification, and registration. Crop-quality analyses examine informativeness, redundancy, learning efficiency, and representation structure to explain how sampling affects transfer.
-
-The current code release includes **VolumeProbe-Lite pretraining and downstream segmentation**. The paper also covers VolumeProbe-Feat diagnostics and the broader downstream evaluations listed below.
-
 ## 🗂️ Dataset
 
 ### Pretraining datasets
@@ -119,7 +111,7 @@ data/
 
 ### Downstream datasets
 
-Use [VoCo_Downstream on Hugging Face](https://huggingface.co/datasets/Luffy503/VoCo_Downstream) as the download hub for the downstream datasets. Our evaluation covers:
+Use [VoCo_Downstream](https://huggingface.co/datasets/Luffy503/VoCo_Downstream) as the download hub for the downstream datasets. Our evaluation covers:
 
 | Task | Datasets |
 | --- | --- |
@@ -135,7 +127,7 @@ VolumeProbe/
 ├── S2DC/                                    # S2DC pretraining
 ├── MedGMAE/                                 # MedGMAE pretraining
 ├── pretraining/                             # Shared data and training utilities
-├── downstream/                              # Segmentation fine-tuning and evaluation
+├── downstream/                              # Downstream fine-tuning and evaluation
 ├── jsons/                                   # Dataset split manifests
 ├── volumeprobe_lite.py                      # Probe scoring and sampling
 ├── build_volumeprobe_cache_VoCo10k.py       # VoCo-10k probe bank
@@ -148,7 +140,7 @@ VolumeProbe/
 
 ## 🛠️ Usage
 
-Use Python 3.11 with a CUDA-enabled PyTorch build. Run from the repository root; each script's `--help` lists the required data, cache, checkpoint, and output arguments.
+Run from the repository root; each script's --help lists the required data, cache, checkpoint, and output arguments.
 
 ```bash
 python -m pip install -r requirements.txt
@@ -181,7 +173,7 @@ torchrun --standalone --nproc_per_node=4 SCRIPT.py
 
 ## 📜 License
 
-VolumeProbe's source code is distributed under the [Apache License 2.0](LICENSE). External libraries, adapted code, and datasets retain the licenses and usage conditions specified by their original providers.
+VolumeProbe's source code is distributed under the [Apache License 2.0](LICENSE). 
 
 ## 🙏 Acknowledgements
 
