@@ -164,7 +164,7 @@ Use `main_baseline.py` in the relevant [downstream task directory](downstream): 
 
 ### Single / multiple GPUs
 
-Replace `SCRIPT.py` with a training or evaluation entry above and append its required arguments. Multi-GPU runs use Linux/NCCL.
+Replace `SCRIPT.py` with a training or evaluation entry above and append its required arguments. 
 
 ```bash
 python SCRIPT.py
